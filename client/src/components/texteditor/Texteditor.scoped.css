@@ -61,3 +61,14 @@
 .body-editor::-webkit-scrollbar {
     display: none;
 }
+
+.export-drive {
+    margin-top: 10px;
+    width: 150px;
+    padding: 8px 12px;
+    background-color: #378DCC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}

@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors = require("cors");
 
 var summary = require('./routes/summary');
+var exportDriveRouter = require('./routes/exportDrive');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -28,21 +29,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
+app.use('/exportDrive', exportDriveRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-var port = 6000;
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`)
-  const new_text = summary.exportSummary('Bob likes apples. Bob also likes bananas. He walks to the fruit market every morning to buy bananas.')
-
-new_text.then(response =>{
-  console.log(response)
-})
-});
 
 // error handler
 app.use(function(err, req, res, next) {
