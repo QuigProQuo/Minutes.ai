@@ -16,7 +16,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "naudiodon": "^2.3.6",
-    "openai": "^2.0.5"
+    "openai": "^2.0.5",
+    "googleapis": "^105.0.0"
   },
   "devDependencies": {
     "electron-rebuild": "^3.2.7"

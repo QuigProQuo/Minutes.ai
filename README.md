@@ -42,6 +42,11 @@ We're proud that we were able to persevere through all the bugs and glitches to 
 * Incorporate a login system, so permanent data can be stored
 * Host our app on a website- we considered utilizing Google Firebase in order to do so, but realized it couldn't instantiate a back-end.
 
+## Google Drive Export
+Minutes.ai can upload meeting notes to Google Drive via the `/exportDrive` API route.
+Set `GOOGLE_SERVICE_ACCOUNT_KEY` to the path of your service account JSON and POST a payload containing `title`, `content` and `transcription` to receive a Drive file ID.
+The text editor now includes an **Export to Drive** button which sends the current note to this endpoint.
+
 ## Tech Stack
 * React
 * Node.js
